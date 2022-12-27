@@ -1,0 +1,99 @@
+mixin list(arr)
+
+  .header__box
+    ul.header__list
+      each value in arr 
+        li.header__item
+          a(href="#!" aria-label= value)= value
+    hr
+    ul.header__list
+      li.header__item
+        a(href="#!" aria-label= "Login") Login
+      li.header__item.header__button
+        a(href="#!" aria-label= "Sign up") Sign Up
+
+mixin footerList(data)
+  each value in data
+    .footer__lists
+      p.footer__title= value["title"]
+      ul.footer__list
+        each item in value.items
+          li.footer__item 
+            a(href="#!" aria-label= value["item"])= item
+
+mixin statistics(data)
+  h1.statistics__header Advanced Statistics 
+  p.statistics__description Track how your links are performing across the web with our advanced statistics dashboard.
+  .statistics__items
+    each value in data 
+      .statistics__item 
+        img.statistics__image(src= `./images/icon-${value["src"]}.svg` alt=value["title"])
+        h1.statistics__title= value["title"]
+        p.statistics__subtitle= value["subtitle"]
+
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Shortly URL shortening API Challenge
+    link(rel="icon" type="image/png" sizes="32x32" href= "./images/favicon-32x32.png")
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer")
+    link(rel="stylesheet" href="./style.css")
+  body 
+    header.header
+      a(href="#" aria-label="home") 
+        img.header__logo(src= "./images/logo.svg" alt="logo")
+      img.header__burger(src= "./images/icon-hamburger.svg" alt="menu")
+      +list(["features", "pricing", "resources"], 'header')
+    main.main
+      img.main__image(src= "./images/illustration-working.svg", alt="working")
+      .main__box
+        h1.main__title More than just shorter links
+        p.main__subtitle Build your brand’s recognition and get detailed insights on how your links are performing.
+        a(href="#!" aria-label= "Sign up") 
+          .main__button Get Started
+    section.content
+      form.content__form(action="#!")
+        label.content__input-link(for="inputLink") 
+          input.content__link(type="text" name="inputLink" placeholder="Shorten a link here...")
+          span.content__span Please add a link
+        label(for="inputSubmit") 
+          input.content__submit(value="Shorten It!")
+      .content__links
+      section.statistics 
+        +statistics([
+          {"title": "Brand Recognition", "subtitle": "Boost your brand recognition with each click. Generic links don't mean a thing. Branded links help instil confidence in your content.", "src": "brand-recognition"},
+          {"title": "Detailed Records", "subtitle": "Gain insights into who is clicking your links. Knowing when and where people engage with your content helps inform better decisions.", "src": "detailed-records"},
+          {"title": "Fully Customizable", "subtitle": "Improve brand awareness and content discoverability through customizable links, supercharging audience engagement.", "src": "fully-customizable"}
+        ])
+    section.subscribe 
+      h1.subscribe__title Boost your links today
+      a(href="#!" aria-label="get started") 
+        .subscribe__button Get Started
+
+    footer.footer
+      .footer__left
+        a(href="#" aria-label="logo") 
+          img.footer__logo(src= "./images/logo.svg", alt="logo")
+      .footer__box 
+        +footerList([
+          {"title": "Features", "items": ["Link Shortening", "Branded Links", "Analytics"]},
+          {"title": "Resources", "items": ["Blog", "Developers", "Support"]},
+          {"title": "Company", "items": ["About", "Our Team", "Careers", "Contact"]}
+        ])
+      ul.footer__brands
+        li.footer__brand
+          a(href=`https://www.facebook.com` aria-label= "facebook" target="_blank")  
+            i.fa-brands.fa-square-facebook
+        li.footer__brand
+          a(href=`https://www.twitter.com` aria-label= "twitter" target="_blank")  
+            i.fa-brands.fa-twitter
+        li.footer__brand
+          a(href=`https://www.pinterest.com` aria-label= "pinterest" target="_blank")  
+            i.fa-brands.fa-pinterest
+        li.footer__brand
+          a(href=`https://www.instagram.com` aria-label= "instagram" target="_blank")  
+            i.fa-brands.fa-instagram
+  script(src="./app.js")

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shortly URL shortening API Challenge</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body> 
+    <header class="header"><a href="#" aria-label="home"> <img class="header__logo" src="./images/logo.svg" alt="logo"></a><img class="header__burger" src="./images/icon-hamburger.svg" alt="menu">
+      <div class="header__box">
+        <ul class="header__list">
+          <li class="header__item"><a href="#!" aria-label="features">features</a></li>
+          <li class="header__item"><a href="#!" aria-label="pricing">pricing</a></li>
+          <li class="header__item"><a href="#!" aria-label="resources">resources</a></li>
+        </ul>
+        <hr/>
+        <ul class="header__list">
+          <li class="header__item"><a href="#!" aria-label="Login">Login</a></li>
+          <li class="header__item header__button"><a href="#!" aria-label="Sign up">Sign Up</a></li>
+        </ul>
+      </div>
+    </header>
+    <main class="main"><img class="main__image" src="./images/illustration-working.svg" alt="working">
+      <div class="main__box">
+        <h1 class="main__title">More than just shorter links</h1>
+        <p class="main__subtitle">Build your brand’s recognition and get detailed insights on how your links are performing.</p><a href="#!" aria-label="Sign up"> 
+          <div class="main__button">Get Started</div></a>
+      </div>
+    </main>
+    <section class="content">
+      <form class="content__form" action="#!">
+        <label class="content__input-link" for="inputLink"> 
+          <input class="content__link" type="text" name="inputLink" placeholder="Shorten a link here..."><span class="content__span">Please add a link</span>
+        </label>
+        <label for="inputSubmit"> 
+          <input class="content__submit" value="Shorten It!">
+        </label>
+      </form>
+      <div class="content__links"></div>
+      <section class="statistics"> 
+        <h1 class="statistics__header">Advanced Statistics </h1>
+        <p class="statistics__description">Track how your links are performing across the web with our advanced statistics dashboard.</p>
+        <div class="statistics__items">
+          <div class="statistics__item"> <img class="statistics__image" src="./images/icon-brand-recognition.svg" alt="Brand Recognition"/>
+            <h1 class="statistics__title">Brand Recognition</h1>
+            <p class="statistics__subtitle">Boost your brand recognition with each click. Generic links don't mean a thing. Branded links help instil confidence in your content.</p>
+          </div>
+          <div class="statistics__item"> <img class="statistics__image" src="./images/icon-detailed-records.svg" alt="Detailed Records"/>
+            <h1 class="statistics__title">Detailed Records</h1>
+            <p class="statistics__subtitle">Gain insights into who is clicking your links. Knowing when and where people engage with your content helps inform better decisions.</p>
+          </div>
+          <div class="statistics__item"> <img class="statistics__image" src="./images/icon-fully-customizable.svg" alt="Fully Customizable"/>
+            <h1 class="statistics__title">Fully Customizable</h1>
+            <p class="statistics__subtitle">Improve brand awareness and content discoverability through customizable links, supercharging audience engagement.</p>
+          </div>
+        </div>
+      </section>
+    </section>
+    <section class="subscribe"> 
+      <h1 class="subscribe__title">Boost your links today</h1><a href="#!" aria-label="get started"> 
+        <div class="subscribe__button">Get Started</div></a>
+    </section>
+    <footer class="footer">
+      <div class="footer__left"><a href="#" aria-label="logo"> <img class="footer__logo" src="./images/logo.svg" alt="logo"></a></div>
+      <div class="footer__box"> 
+        <div class="footer__lists">
+          <p class="footer__title">Features</p>
+          <ul class="footer__list">
+            <li class="footer__item"> <a href="#!">Link Shortening</a></li>
+            <li class="footer__item"> <a href="#!">Branded Links</a></li>
+            <li class="footer__item"> <a href="#!">Analytics</a></li>
+          </ul>
+        </div>
+        <div class="footer__lists">
+          <p class="footer__title">Resources</p>
+          <ul class="footer__list">
+            <li class="footer__item"> <a href="#!">Blog</a></li>
+            <li class="footer__item"> <a href="#!">Developers</a></li>
+            <li class="footer__item"> <a href="#!">Support</a></li>
+          </ul>
+        </div>
+        <div class="footer__lists">
+          <p class="footer__title">Company</p>
+          <ul class="footer__list">
+            <li class="footer__item"> <a href="#!">About</a></li>
+            <li class="footer__item"> <a href="#!">Our Team</a></li>
+            <li class="footer__item"> <a href="#!">Careers</a></li>
+            <li class="footer__item"> <a href="#!">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <ul class="footer__brands">
+        <li class="footer__brand"><a href="https://www.facebook.com" aria-label="facebook" target="_blank"> <i class="fa-brands fa-square-facebook"></i></a></li>
+        <li class="footer__brand"><a href="https://www.twitter.com" aria-label="twitter" target="_blank"> <i class="fa-brands fa-twitter"></i></a></li>
+        <li class="footer__brand"><a href="https://www.pinterest.com" aria-label="pinterest" target="_blank"> <i class="fa-brands fa-pinterest"></i></a></li>
+        <li class="footer__brand"><a href="https://www.instagram.com" aria-label="instagram" target="_blank"> <i class="fa-brands fa-instagram"></i></a></li>
+      </ul>
+    </footer>
+  </body>
+  <script src="./app.js"></script>
+</html>
